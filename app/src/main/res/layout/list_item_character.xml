@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.MaterialComponents.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_small"
+    android:layout_marginEnd="@dimen/margin_small"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/item_character_list_image_view"
+            android:layout_width="@dimen/character_image_size"
+            android:layout_height="@dimen/character_image_size"
+            android:contentDescription="@string/no_image" />
+
+        <TextView
+            android:id="@+id/item_character_list_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toEndOf="@id/item_character_list_image_view"
+            tools:text="Rick Morty" />
+
+        <TextView
+            android:id="@+id/item_character_list_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="@id/item_character_list_name_tv"
+            app:layout_constraintTop_toBottomOf="@id/item_character_list_name_tv"
+            tools:text="Alive" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
